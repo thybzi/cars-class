@@ -4,7 +4,7 @@ const components = [
 ];
 
 Promise.all(components.map(loadComponent)).then(() => {
-    document.body.insertAdjacentHTML('beforeend', page());
+    document.body.insertAdjacentHTML('afterbegin', _page());
 });
 
 
