@@ -1,6 +1,13 @@
 'use strict';
 
 const components = [
+    '_page',
+    'button',
+    'catalogContent',
+    'catalogItem',
+    'catalogItemsGallery',
+    'catalogMore',
+    'icon',
 ];
 
 Promise.all(components.map(loadComponent)).then(() => {
