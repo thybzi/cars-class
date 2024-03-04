@@ -46,5 +46,6 @@ function _page() {
                 },
             ],
         }),
+        button: catalogMore()
     });
 }
