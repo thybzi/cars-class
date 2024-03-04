@@ -2,6 +2,7 @@
     box-sizing: border-box;
     height: 44px;
     padding: 10px 20px;
+    border-radius: 4px;
     background-color: #3563E9;
     color: #FFFFFF;
     text-align: center;
