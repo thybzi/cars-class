@@ -11,6 +11,7 @@ const components = [
 ];
 
 Promise.all(components.map(loadComponent)).then(() => {
+    document.body.insertAdjacentHTML('afterbegin', catalogMore());
     document.body.insertAdjacentHTML('afterbegin', _page());
 });
 
