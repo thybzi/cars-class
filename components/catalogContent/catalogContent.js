@@ -4,7 +4,7 @@ function catalogContent({
 }) {
     return `
         <div class="catalogContent">
-            ${content},
+            ${content}
             ${button}
         </div>
     `;
