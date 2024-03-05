@@ -1,0 +1,21 @@
+{
+  "name": "cars-class",
+  "version": "1.0.0",
+  "description": "Cars demo",
+  "main": "main.js",
+  "scripts": {
+    "lint-js": "npx eslint .",
+    "lint": "npm run lint-js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thybzi/cars-class.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thybzi/cars-class/issues"
+  },
+  "homepage": "https://github.com/thybzi/cars-class#readme"
+}
