@@ -30,7 +30,7 @@ function catalogItem({
                 <div class="icon ${favoriteIconClass}"></div>
             </div>
             <div class="catalogItem__imageBlock">
-                <img class="catalogItem__image" src="files/${image}">
+                <img class="catalogItem__image" src="https://ik.imagekit.io/thybzi/${image}">
             </div>
             <div class="catalogItem__details">
                 ${details(`icon_fuel`, `${volume}L`)}
