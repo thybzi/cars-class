@@ -5,5 +5,5 @@
 */
 
 function icon() {
-    return `<div class="icon icon_heartOutline"></div>`;
+    return '<div class="icon icon_heartOutline"></div>';
 }

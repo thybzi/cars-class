@@ -7,10 +7,9 @@ async function _page() {
             content: catalogItemsGallery({
                 items: data,
             }),
-            button: catalogMore()
+            button: catalogMore(),
         });
     } catch (ex) {
         return 'Не удалось загрузить данные';
     }
 }
-
