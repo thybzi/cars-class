@@ -10,8 +10,8 @@ const components = [
     'icon',
 ];
 
-Promise.all(components.map(loadComponent)).then(() => {
-    document.body.insertAdjacentHTML('afterbegin', _page());
+Promise.all(components.map(loadComponent)).then(async () => {
+    document.body.insertAdjacentHTML('afterbegin', await _page());
 });
 
 
