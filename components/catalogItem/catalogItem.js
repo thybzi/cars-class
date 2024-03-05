@@ -11,6 +11,15 @@ function catalogItem({
 }) {
     const favoriteIconClass = isFavorite ? 'icon_heart' : 'icon_heartOutline';
 
+    function details(iconName, data) {
+        return `
+            <div class="catalogItem__detailsItem">
+                <div class="icon ${iconName} catalogItem__detailsItemIcon"></div>
+                <div class="catalogItem__detailsItemCaption">${data}</div>
+            </div>
+        `;
+    }
+
     return `
         <div class="catalogItem">
             <div class="catalogItem__titleBlock">
@@ -24,18 +33,9 @@ function catalogItem({
                 <img class="catalogItem__image" src="files/${image}">
             </div>
             <div class="catalogItem__details">
-                <div class="catalogItem__detailsItem">
-                    <div class="icon icon_fuel catalogItem__detailsItemIcon"></div>
-                    <div class="catalogItem__detailsItemCaption">${volume}L</div>
-                </div>
-                <div class="catalogItem__detailsItem">
-                    <div class="icon icon_steer catalogItem__detailsItemIcon"></div>
-                    <div class="catalogItem__detailsItemCaption">${gear}</div>
-                </div>
-                <div class="catalogItem__detailsItem">
-                    <div class="icon icon_people catalogItem__detailsItemIcon"></div>
-                    <div class="catalogItem__detailsItemCaption">${capacity} People</div>
-                </div>
+                ${details(`icon_fuel`, `${volume}L`)}
+                ${details(`icon_steer`, gear)}
+                ${details(`icon_people`, `${capacity} People`)}
             </div>
             <div class="catalogItem__rentBlock">
                 <div class="catalogItem__priceBlock">
