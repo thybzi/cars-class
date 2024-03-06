@@ -9,7 +9,7 @@ function catalogItem({
     price,
     oldPrice,
 }) {
-    const favoriteIconClass = isFavorite ? 'icon_heart' : 'icon_heartOutline';
+    const favoriteIconName = isFavorite ? 'heart' : 'heartOutline';
 
     return `
         <div class="catalogItem">
@@ -18,7 +18,9 @@ function catalogItem({
                 <div class="catalogItem__category">${category}</div>
             </div>
             <div class="catalogItem__favorite">
-                <div class="icon ${favoriteIconClass}"></div>
+                ${icon({
+                    name: favoriteIconName,
+                })}
             </div>
             <div class="catalogItem__imageBlock">
                 <img class="catalogItem__image" src="files/${image}">
