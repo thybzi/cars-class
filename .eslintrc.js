@@ -24,6 +24,7 @@ module.exports = {
         'indent': ['error', 4, {ignoredNodes: ['TemplateLiteral *']}],
         'no-multiple-empty-lines': ['error', {max: 2, maxEOF: 0}],
         'no-param-reassign': ['error', {props: false}],
+        'no-restricted-syntax': 'off',
         'no-underscore-dangle': 'off',
         'no-use-before-define': ['error', {functions: false}],
         'object-curly-spacing': ['error', 'never'],

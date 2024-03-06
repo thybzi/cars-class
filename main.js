@@ -1,3 +1,4 @@
+import {applyHandlers} from './handlers.js';
 import {_page} from './components/_page/_page.js';
 
 const components = [
@@ -12,6 +13,7 @@ const components = [
 
 Promise.all(components.map(loadComponent)).then(async () => {
     document.body.insertAdjacentHTML('afterbegin', await _page());
+    applyHandlers();
 });
 
 
