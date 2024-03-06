@@ -27,15 +27,24 @@ function catalogItem({
             </div>
             <div class="catalogItem__details">
                 <div class="catalogItem__detailsItem">
-                    <div class="icon icon_fuel catalogItem__detailsItemIcon"></div>
+                    ${icon({
+                        name: 'fuel',
+                        auxClass: 'catalogItem__detailsItemIcon',
+                    })}
                     <div class="catalogItem__detailsItemCaption">${volume}L</div>
                 </div>
                 <div class="catalogItem__detailsItem">
-                    <div class="icon icon_steer catalogItem__detailsItemIcon"></div>
+                    ${icon({
+                        name: 'steer',
+                        auxClass: 'catalogItem__detailsItemIcon',
+                    })}
                     <div class="catalogItem__detailsItemCaption">${gear}</div>
                 </div>
                 <div class="catalogItem__detailsItem">
-                    <div class="icon icon_people catalogItem__detailsItemIcon"></div>
+                    ${icon({
+                        name: 'people',
+                        auxClass: 'catalogItem__detailsItemIcon',
+                    })}
                     <div class="catalogItem__detailsItemCaption">${capacity} People</div>
                 </div>
             </div>
