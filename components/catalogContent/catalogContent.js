@@ -1,11 +1,15 @@
+import {catalogItemsGallery} from '../catalogItemsGallery/catalogItemsGallery.js';
+import {catalogMore} from '../catalogMore/catalogMore.js';
+
 export function catalogContent({
-    content = '',
-    button = '',
+    galleryItems = [],
 }) {
     return `
         <div class="catalogContent">
-            ${content}
-            ${button}
+            ${catalogItemsGallery({
+                items: galleryItems,
+            })}
+            ${catalogMore()}
         </div>
     `;
 }
