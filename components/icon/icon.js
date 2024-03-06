@@ -4,6 +4,6 @@
 <div class="icon icon_people catalogItem__detailsItemIcon"></div>
 */
 
-function icon() {
+export function icon() {
     return '<div class="icon icon_heartOutline"></div>';
 }

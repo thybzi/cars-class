@@ -1,3 +1,5 @@
+import {_page} from './components/_page/_page.js';
+
 const components = [
     '_page',
     'button',
