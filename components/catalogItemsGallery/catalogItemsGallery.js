@@ -5,7 +5,11 @@ export function catalogItemsGallery({
 }) {
     return `
         <div class="catalogItemsGallery">
-            ${items.map(catalogItem).join('\n')}
+            ${formatItems(items)}
         </div>
     `;
+}
+
+export function formatItems(items) {
+    return items.map(catalogItem).join('\n');
 }
