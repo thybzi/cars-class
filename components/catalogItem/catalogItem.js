@@ -1,4 +1,6 @@
-function catalogItem({
+import {button} from '../button/button.js';
+
+export function catalogItem({
     title,
     category,
     isFavorite,
@@ -10,6 +12,18 @@ function catalogItem({
     oldPrice,
 }) {
     const favoriteIconName = isFavorite ? 'heart' : 'heartOutline';
+
+    function details(iconName, data) {
+        return `
+            <div class="catalogItem__detailsItem">
+                ${icon({
+                    name: iconName,
+                    auxClass: 'catalogItem__detailsItemIcon',
+                })}
+                <div class="catalogItem__detailsItemCaption">${data}</div>
+            </div>
+        `;
+    }
 
     return `
         <div class="catalogItem">
@@ -23,30 +37,12 @@ function catalogItem({
                 })}
             </div>
             <div class="catalogItem__imageBlock">
-                <img class="catalogItem__image" src="files/${image}">
+                <img class="catalogItem__image" src="https://ik.imagekit.io/thybzi/${image}">
             </div>
             <div class="catalogItem__details">
-                <div class="catalogItem__detailsItem">
-                    ${icon({
-                        name: 'fuel',
-                        auxClass: 'catalogItem__detailsItemIcon',
-                    })}
-                    <div class="catalogItem__detailsItemCaption">${volume}L</div>
-                </div>
-                <div class="catalogItem__detailsItem">
-                    ${icon({
-                        name: 'steer',
-                        auxClass: 'catalogItem__detailsItemIcon',
-                    })}
-                    <div class="catalogItem__detailsItemCaption">${gear}</div>
-                </div>
-                <div class="catalogItem__detailsItem">
-                    ${icon({
-                        name: 'people',
-                        auxClass: 'catalogItem__detailsItemIcon',
-                    })}
-                    <div class="catalogItem__detailsItemCaption">${capacity} People</div>
-                </div>
+                ${details('icon_fuel', `${volume}L`)}
+                ${details('icon_steer', gear)}
+                ${details('icon_people', `${capacity} People`)}
             </div>
             <div class="catalogItem__rentBlock">
                 <div class="catalogItem__priceBlock">

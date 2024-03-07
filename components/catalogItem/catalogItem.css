@@ -4,11 +4,11 @@
 
 .catalogItem {
     position: relative;
-    height: 388px;
     box-sizing: border-box;
+    height: 388px;
     padding: var(--catalogItem-pad);
-    border-radius: 10px;
     background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 .catalogItem__titleBlock {
@@ -17,18 +17,18 @@
 
 .catalogItem__title {
     color: #1A202C;
+    font-weight: 700;
     font-size: 20px;
     line-height: 30px;
-    font-weight: 700;
     letter-spacing: -0.6px;
 }
 
 .catalogItem__category {
     margin-top: 4px;
     color: #90A3BF;
+    font-weight: 700;
     font-size: 14px;
     line-height: 21px;
-    font-weight: 700;
     letter-spacing: -0.28px;
 }
 
@@ -44,37 +44,37 @@
 .catalogItem__imageBlock {
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 28px;
+    justify-content: center;
     height: 132px;
+    margin-top: 28px;
 }
 
 .catalogItem__image {
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
 }
 
 .catalogItem__imageBlock::after {
-    content: '';
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     height: 66px;
     background-image: linear-gradient(to top, #FFFFFF, rgba(255, 255, 255, 0));
+    content: '';
 }
 
 .catalogItem__details {
-    margin-top: 28px;
     display: flex;
     justify-content: space-between;
+    margin-top: 28px;
 }
 
 .catalogItem__detailsItem {
+    display: flex;
     flex-grow: 0;
     flex-shrink: 0;
-    display: flex;
     align-items: center;
 }
 
@@ -86,17 +86,17 @@
 
 .catalogItem__detailsItemCaption {
     color: #90A3BF;
+    font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    font-weight: 500;
     letter-spacing: -0.28px;
 }
 
 .catalogItem__rentBlock {
     position: absolute;
+    right: var(--catalogItem-pad);
     bottom: var(--catalogItem-pad);
     left: var(--catalogItem-pad);
-    right: var(--catalogItem-pad);
     display: flex;
     align-items: center;
 }
@@ -121,17 +121,17 @@
 
 .catalogItem__price {
     color: #1A202C;
+    font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    font-weight: 700;
     vertical-align: bottom;
 }
 
 .catalogItem__subject {
     color: #90A3BF;
+    font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    font-weight: 700;
 }
 
 .catalogItem__rentButton {

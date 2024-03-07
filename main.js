@@ -1,4 +1,4 @@
-'use strict';
+import {_page} from './components/_page/_page.js';
 
 const components = [
     '_page',
@@ -10,8 +10,8 @@ const components = [
     'icon',
 ];
 
-Promise.all(components.map(loadComponent)).then(() => {
-    document.body.insertAdjacentHTML('afterbegin', _page());
+Promise.all(components.map(loadComponent)).then(async () => {
+    document.body.insertAdjacentHTML('afterbegin', await _page());
 });
 
 
@@ -21,14 +21,7 @@ function loadComponent(name) {
     styleElem.href = `components/${name}/${name}.css`;
     document.head.append(styleElem);
 
-    const scriptElem = document.createElement('script');
-    scriptElem.src = `components/${name}/${name}.js`;
-    document.head.append(scriptElem);
-
-    return Promise.all([
-        promiseElemLoad(styleElem),
-        promiseElemLoad(scriptElem),
-    ]);
+    return promiseElemLoad(styleElem);
 }
 
 function promiseElemLoad(elem) {

@@ -1,4 +1,4 @@
-function icon({
+export function icon({
     name,
     auxClass = '',
 }) {
