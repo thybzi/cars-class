@@ -1,4 +1,4 @@
-function button({
+export function button({
     text,
     auxClass = '',
 }) {

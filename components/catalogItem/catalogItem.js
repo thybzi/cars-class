@@ -1,4 +1,6 @@
-function catalogItem({
+import {button} from '../button/button.js';
+
+export function catalogItem({
     title,
     category,
     isFavorite,

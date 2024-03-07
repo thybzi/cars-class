@@ -1,4 +1,4 @@
-function catalogContent({
+export function catalogContent({
     content = '',
     button = '',
 }) {
