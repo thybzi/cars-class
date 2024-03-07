@@ -14,11 +14,11 @@ export function addHandler(selector, handler, eventName = 'click') {
 
 export function applyHandlers() {
     for (const selector of Object.keys(eventHandlers)) {
-        const elem = document.querySelector(selector);
-
-        for (const [eventName, handlersList] of Object.entries(eventHandlers[selector])) {
-            for (const handler of handlersList) {
-                elem.addEventListener(eventName, handler);
+        for (const elem of document.querySelectorAll(selector)) {
+            for (const [eventName, handlersList] of Object.entries(eventHandlers[selector])) {
+                for (const handler of handlersList) {
+                    elem.addEventListener(eventName, handler);
+                }
             }
         }
     }
