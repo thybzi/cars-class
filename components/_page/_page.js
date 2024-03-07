@@ -9,6 +9,6 @@ export async function _page() {
             galleryItems: data,
         });
     } catch (ex) {
-        return 'Не удалось загрузить данные';
+        return `Не удалось отобразить страницу: ${ex.message}`;
     }
 }
