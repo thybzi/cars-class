@@ -1,4 +1,5 @@
 import {button} from '../button/button.js';
+import {icon} from '../icon/icon.js';
 
 export function catalogItem({
     title,
