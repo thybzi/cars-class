@@ -1,3 +1,4 @@
+import {addHandler} from '../../handlers.js';
 import {button} from '../button/button.js';
 import {icon} from '../icon/icon.js';
 
@@ -15,6 +16,8 @@ export function catalogItem({
     oldPrice,
 }) {
     const favoriteIconName = isFavorite ? 'heart' : 'heartOutline';
+
+    addHandler('.catalogItemsGallery', toggleFavorite);
 
     function details(iconName, data) {
         return `
@@ -63,4 +66,14 @@ export function catalogItem({
             </div>
         </div>
     `;
+}
+
+function toggleFavorite(event) {
+    if (!event.target.classList.contains(favoriteIconElemClass)) {
+        return;
+    }
+
+    const heartElem = event.target;
+    heartElem.classList.toggle('icon_heart');
+    heartElem.classList.toggle('icon_heartOutline');
 }
