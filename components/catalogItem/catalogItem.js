@@ -1,6 +1,8 @@
 import {button} from '../button/button.js';
 import {icon} from '../icon/icon.js';
 
+const favoriteIconElemClass = 'catalogItem__favoriteIcon';
+
 export function catalogItem({
     title,
     category,
@@ -35,6 +37,7 @@ export function catalogItem({
             <div class="catalogItem__favorite">
                 ${icon({
                     name: favoriteIconName,
+                    auxClass: favoriteIconElemClass,
                 })}
             </div>
             <div class="catalogItem__imageBlock">
