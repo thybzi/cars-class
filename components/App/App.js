@@ -1,6 +1,6 @@
-import {catalogContent} from '../catalogContent/catalogContent.js';
+import {catalogContent} from '../CatalogContent/catalogContent.js';
 
-export async function _page() {
+export async function App() {
     try {
         const res = await fetch('https://demo5394722.mockable.io/cars');
         const data = await res.json();

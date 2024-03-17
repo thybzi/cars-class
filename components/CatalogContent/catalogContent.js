@@ -2,8 +2,8 @@ import {addHandler} from '../../handlers.js';
 import {
     catalogItemsGallery,
     formatItems as formatGalleryItems,
-} from '../catalogItemsGallery/catalogItemsGallery.js';
-import {catalogMore} from '../catalogMore/catalogMore.js';
+} from '../CatalogItemsGallery/CatalogItemsGallery.js';
+import {catalogMore} from '../CatalogMore/CatalogMore.js';
 
 export function catalogContent({
     galleryItems = [],

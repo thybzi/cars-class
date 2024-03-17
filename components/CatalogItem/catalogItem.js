@@ -1,6 +1,6 @@
 import {addHandler} from '../../handlers.js';
-import {button} from '../button/button.js';
-import {icon} from '../icon/icon.js';
+import {button} from '../Button/Button.js';
+import {icon} from '../Icon/Icon.js';
 
 const favoriteIconElemClass = 'catalogItem__favoriteIcon';
 

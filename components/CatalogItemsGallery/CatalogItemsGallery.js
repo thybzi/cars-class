@@ -1,4 +1,4 @@
-import {catalogItem} from '../catalogItem/catalogItem.js';
+import {catalogItem} from '../CatalogItem/catalogItem.js';
 
 export function catalogItemsGallery({
     items = [],
