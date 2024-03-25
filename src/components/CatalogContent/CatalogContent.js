@@ -1,26 +1,27 @@
-import {addHandler} from '../../handlers.js';
 import {
-    catalogItemsGallery,
-    formatItems as formatGalleryItems,
-} from '../CatalogItemsGallery/CatalogItemsGallery.js';
-import {catalogMore} from '../CatalogMore/CatalogMore.js';
+    CatalogItemsGallery,
+} from '../CatalogItemsGallery/CatalogItemsGallery';
+import {CatalogMore} from '../CatalogMore/CatalogMore';
 
-export function catalogContent({
+export function CatalogContent({
     galleryItems = [],
 }) {
     const galleryItemsLimit = 3;
+    /*
     addHandler('.catalogMore__button', showMoreItems);
+    */
 
-    return `
-        <div class="catalogContent">
-            ${catalogItemsGallery({
-                items: galleryItems.slice(0, galleryItemsLimit),
-            })}
-            ${catalogMore()}
+    return (
+        <div className="catalogContent">
+            <CatalogItemsGallery
+                items={galleryItems.slice(0, galleryItemsLimit)}
+            />
+            <CatalogMore/>
         </div>
-    `;
+    );
 
 
+    /*
     function showMoreItems() {
         const galleryElem = document.querySelector('.catalogItemsGallery');
         const lastChildIndex = galleryElem.children.length - 1;
@@ -30,4 +31,5 @@ export function catalogContent({
             galleryElem.insertAdjacentHTML('beforeend', formatGalleryItems(newItems));
         }
     }
+    */
 }

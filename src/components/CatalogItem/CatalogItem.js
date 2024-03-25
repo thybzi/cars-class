@@ -1,10 +1,10 @@
-import {addHandler} from '../../handlers.js';
+import {addHandler} from '../../../handlers.js';
 import {button} from '../Button/Button.js';
 import {icon} from '../Icon/Icon.js';
 
 const favoriteIconElemClass = 'catalogItem__favoriteIcon';
 
-export function catalogItem({
+export function CatalogItem({
     title,
     category,
     isFavorite,
@@ -15,6 +15,13 @@ export function catalogItem({
     price,
     oldPrice,
 }) {
+    return (
+        <div className="catalogItem">
+            {title}
+        </div>
+    );
+
+    /*
     const favoriteIconName = isFavorite ? 'heart' : 'heartOutline';
 
     addHandler('.catalogItemsGallery', toggleFavorite);
@@ -66,7 +73,9 @@ export function catalogItem({
             </div>
         </div>
     `;
+    */
 }
+
 
 function toggleFavorite(event) {
     if (!event.target.classList.contains(favoriteIconElemClass)) {
@@ -77,3 +86,4 @@ function toggleFavorite(event) {
     heartElem.classList.toggle('icon_heart');
     heartElem.classList.toggle('icon_heartOutline');
 }
+
